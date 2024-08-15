@@ -1,0 +1,340 @@
+/*style du header*/
+/*declaration des variables*/
+:root{
+    --vert:#53B758;
+    --bordur:solid thin lightgray; 
+    --grie:rgb(191, 187, 187);
+}
+header{
+    width: 90%;
+    height: auto;
+    display: flex;
+    margin:0 0 0 5%;
+}
+header .logo{
+    display: flex;
+    font-size: xx-large;
+    font-weight: bolder;
+}
+.logo img,.service img{
+    width: 2em;
+    height: 2em;
+}
+/*style du numero de telephone*/
+.number{
+    width:18%;
+    border:var(--bordur);
+    height: 1.5em;
+    text-align: center;
+    padding:.6em .7em .2em .7em ;
+    background-color:var(--vert);
+    border-radius: 1em;
+    color: white;
+    margin: .3em 0 0 3em;
+}
+nav{
+    width: 70%;
+    display: flex;
+    float: right;
+}
+nav li{
+    display: inline;
+}
+nav a{
+    text-decoration: none;
+    color: rgb(191, 187, 187);
+    margin: 0 0 0 2em;
+    transition: color,font-size,border, 1.2s;
+}
+.menu,.close{
+    display: none;
+    color: white;
+    background-color:var(--vert);
+    border: var(--bordur);
+    font-family: sans-serif;
+    font-size: large;
+    border-radius: .4em;
+    height: 2em;
+}
+.menu_deroulant{
+    display: none;
+}
+/*style du corps de la page*/
+.corps{
+    width: 90%;
+    height: auto;
+    margin: 5% 0 0 5%;
+}
+/*style du paragraphe et l image de font*/
+.Entete{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+}
+.Entete .text{
+    width: 45%;
+    height: auto;
+}
+.Entete .image{
+    width: 40%;
+    height: 30em;
+    border: var(--bordur);
+    border-radius: 3em;
+    background-color: var(--vert);
+    background: url(./images/images/img1.jpg);
+    background-position: center;
+    background-size: cover;
+
+}
+.text h1{
+    font-size: 6em;
+    margin: 0;
+}
+.text h1 span{
+    color: var(--vert);
+}
+.text button,#envoyer{
+    width: 40%;
+    height: 3em;
+    border: var(--bordur);
+    background-color: var(--vert);
+    color: white;
+    text-align: center;
+    border-radius: 2em;
+}
+.TitreGrie{
+    color: var(--grie);
+}
+.text{
+    color: rgb(86, 84, 84);
+    margin: 10% 0 0 0 ;
+}
+/*style des services*/
+.service h1,.apropos h1{
+    font-size:3em;
+    color:rgb(86, 84, 84) ;
+    margin: 0;
+}
+.service p{
+    color: var(--grie);
+}
+/*style du comteneur d image*/
+.contentImage{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+}
+.contentImage div{
+    width: 22%;
+    height: auto;
+    border:var(--bordur);
+    text-align: center;
+    border-radius: 1em;
+    box-shadow: 5px 5px 5px 5px var(--grie);
+}
+.contentImage img{
+    width:6em;
+    height: 6em;
+    position: center;
+}
+.contentImage button{
+    height: 3em;
+    border: var(--bordur);
+    background-color: var(--vert);
+    color: white;
+    text-align: center;
+    border-radius: 2em;
+    width:70% ;
+    margin: 2em 0 1.5em 0 ;
+}
+/*style des description numeroter*/
+.apropos div{
+    display: flex;
+    justify-content: space-between;
+    margin: 1em 0 0 0;
+}
+.apropos span{
+    color: rgb(86, 84, 84) ;
+}
+.apropos p{
+    color: var(--grie);
+}
+.apropos  h1{
+    margin: 2em 0 0 0;
+}
+.apropos div h1{
+    font-size: 6em;
+    margin: 0 .3em 0 0;
+    color: var(--vert);
+}
+.apropos p span{
+    font-weight: bolder;
+    font-size: large;
+}
+/*style du block de contact*/
+.contacte{
+    margin: 2em 0 0 0;
+    display: flex;
+    justify-content: space-between;
+}
+form{
+    width: 35%;
+}
+input{
+    width: 98%;
+    height: 3.3em;
+    background-color: rgb(228, 221, 221);
+    border: var(--bordur);
+    border-radius: 1.5em;
+    margin: .7em 0 0 0;
+    padding: 0 0 0 .8em;
+}
+#message{
+    height: 13em;
+    border-radius: 1em;
+}
+#envoyer{
+    height: 3em;
+}
+.contacte div{
+    width: 50%;
+    height: 28em;
+    border: var(--bordur);
+    border-radius: 2em;
+    background-image: url(./images/images/img2.jpg);
+    background-position: center;
+    background-size: cover;
+}
+/*annimation de la page*/
+nav a:hover{
+    font-size: large;
+    color: var(--vert);
+    border-bottom:solid ;
+}
+button:hover{
+    background-color: green;
+}
+button{
+    transition: background-color 1s;
+}
+/*responssive de la page*/
+@media only screen and (max-width:600px){
+/*la responssive de la barre de navigation*/
+header nav{
+  display: none;
+}
+header .logo{
+    font-size: large;
+}
+.logo img,.service img{
+    width: 2em;
+    height: 2em;
+}
+.menu_deroulant{
+    z-index: 10;
+    background-color: rgb(126, 172, 126);
+    height: 100%;
+    width: 100%;
+    transform: translateX(-101%);
+    transition-duration:2s;
+}
+
+.menu_deroulant nav ul li{
+    display:  block;
+    font-size: x-large;
+    margin: 1em 0 0 0;
+}
+.menu_deroulant nav a{
+    text-decoration: none;
+    color: rgb(191, 187, 187);
+    transition: color,font-size,border, 1.2s;
+}
+.menu{
+    display: block;
+    position: absolute;
+    left:85% ;
+}
+.close{
+    display: block;
+}
+.number{
+    width:30%;
+    border:var(--bordur);
+    height: 1.5em;
+    text-align: center;
+    padding:.6em .7em .2em .7em ;
+    background-color:var(--vert);
+    border-radius: 1em;
+    color: white;
+    margin: .3em 0 0 3em;
+}
+/*responssive du corps*/
+.corps{
+    display: block;
+    overflow: hidden;
+}
+.Entete{
+    flex-direction: column-reverse;
+}
+.Entete .image{
+    width: 100%;
+    height: 30em;
+}
+.Entete .text{
+    width: 100%;
+    height: auto;
+    margin:  0 0 20% 0;
+}
+.text h1{
+    font-size: 4em;
+}
+/*responssive des service*/
+.contentImage{
+    display: block;
+}
+.contentImage div{
+    width: 90%;
+    height: 14em;
+    margin: 20% 0 10% 5%;
+}
+.contentImage img{
+    width:5em;
+    height: 5em;
+    position: center;
+    margin: 0.4em 0 0 0;
+}
+/*responssive des description numeroter*/
+.apropos p{
+    color: var(--grie);
+}
+.apropos  h1{
+    margin: 0 0 0 0;
+}
+.apropos div h1{
+    font-size: 3em;
+    margin: 0 .3em 0 0;
+    color: var(--vert);
+}
+
+/*responssive des services*/
+.service h1,.apropos h1{
+    font-size:2em;
+    color:rgb(86, 84, 84) ;
+    margin: 0 0 2em 0;
+}
+.text button,#envoyer{
+    width: 40%;
+}
+/*responssive du contact*/
+.contacte{
+    flex-direction: column-reverse;
+}
+.contacte div{
+    width: 100%;
+}
+.contacte form{
+    width: 100%;
+}
+}
